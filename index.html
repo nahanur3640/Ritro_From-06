@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReTro Form </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        retro: '#797DFC',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="mulis">
+    <header class="max-w-[1170px]  container mx-auto md:mt-10  mb-10">
+        <div class="navbar bg-base-100 ">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="">
+                        <img src="images/logo.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="navbar-end gap-4">
+
+                <div class="md:flex hidden">
+                    <div class="tooltip" data-tip="House">
+                        <button class="btn"> <img src="icon/house.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="md:flex hidden">
+                    <div class="tooltip" data-tip="Tooltip">
+                        <button class="btn"> <img src="icon/pen.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="md:flex hidden">
+                    <div class="tooltip" data-tip="Contact">
+                        <button class="btn"> <img src="icon/profile.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="md:flex hidden">
+                    <div class="tooltip" data-tip="Flag">
+                        <button class="btn"> <img src="icon/flag.png" alt=""></button>
+                    </div>
+                </div>
+                <button class="btn btn-primary bg-[#797DFC] opacity-100% rounded-3xl  border-none text-white  font-sm">
+                    Sign In
+                </button>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main class="max-w-[1170px] mx-auto">
+
+
+        <!--  section part 01 -->
+        <section>
+            <div class="hero min-h-screen  bg-[#12132D] rounded-3xl  "
+                style="background-image: url(images/bgbanner.png);  ">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-36">
+                    <div class="mx-auto ">
+                        <h1 class="text-white lg:text-6xl text-4xl mt-10 lg:mr-9 mx-auto font-black">Welcome to the <br>
+                            <span class="text-retro mr-4">ReTro</span>Forum
+                        </h1>
+                        <p class="text-white lg:text-xl mt-5">Share your favorite opinion and win and wp <br> forum
+                            coffe mug!</p>
+                        <label class="input input-bordered p-8 rounded-full flex items-center gap-2 mt-10">
+                            <input id="input" type="text" class="grow" placeholder="Search here anything" />
+                            <button onclick="Search()"
+                                class="badge badge-info lg:p-6 p-4 -mr-7 text-white lg:text-xl font-bold">Search</button>
+
+                        </label>
+                    </div>
+                    <div class="lg:mt-10 ">
+                        <div class="card md:w-96 w-80 bg-base-100 shadow-xl">
+                            <div class="card-body ">
+                                <div class="flex justify-between font-bold text-base ">
+                                    <h3 class="">Registered Users</h3>
+                                    <h3>01</h3>
+                                </div>
+                                <div class="flex justify-between font-bold text-base  ">
+                                    <h3>Forum </h3>
+                                    <h3>01</h3>
+                                </div>
+                                <div class="flex justify-between font-bold text-base ">
+                                    <h3>Topics</h3>
+                                    <h3>01</h3>
+                                </div>
+                                <div class="flex justify-between font-bold text-base ">
+                                    <h3>Replies</h3>
+                                    <h3>01</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!--  section part 02 -->
+
+
+
+        <section id="titleDev" class="max-w-[1170px] container mx-auto mt-20 ">
+            <div class="grid md:grid-cols-2 grid-cols-1 ">
+
+                <div id="news-container" class=" rounded-3xl ">
+
+                </div>
+                <div class="w-80 md:w-full mx-auto">
+                    <div class="rounded-3xl  bg-[#12132D0D] opacity-5% ">
+                        <div class="flex justify-between p-5 ">
+                            <div>
+                                <h2 class="text-xl font-bold">Title</h2>
+                            </div>
+                            <div class="flex">
+                                <div onclick="" class="mt-2 mr-2">
+                                    <img src="icon/Vector (5).png" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-base text-[#12132D99]">Mark as read ( <span id="countUP">0</span> )
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="titleShow" class="p-5">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--  section part 03 -->
+        <section class="max-w-[1170px] container mx-auto text-center mt-20">
+            <h1 class="text-4xl font-black">Let's Discuss</h1>
+            <p class="text-lg font-normal w-2/3 mx-auto mt-5">Embracing diverse perspectives fuels innovation and
+                fosters understanding making every discourse a
+                potential win. making every exchange an opportunity for growth and mutual benefit.</p>
+
+        </section>
+        <section id="loading-spinner" class="max-w-[1170px] container mx-auto text-center mt-20 hidden">
+            <div class="">
+                <span class="loading loading-spinner w-16 loading-lg"></span>
+            </div>
+        </section>
+
+
+
+        <!--  section part 04 -->
+
+        <section class="max-w-[1170px] container mx-auto mt-20">
+            <div class="hero min-h-screen  bg-[#12132D] rounded-3xl ">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-36">
+                    <div class="mt-20 p-10">
+                        <h1 class="text-white lg:text-6xl text-4xl font-black">Join Our Forum</h1>
+                        <p class="text-white lg:text-xl mt-5">Share your favorite opinion and win and wp <br> forum
+                            coffe mug!</p>
+                        <span class="badge badge-info p-6 -mr-7 mt-10 text-white text-xl font-bold">Registered
+                            Now</span>
+                    </div>
+                    <div class="mt-10">
+                        <img src="images/joinforum.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- section part 05 -->
+
+        <section class="max-w-[1170px] container mx-auto text-center mt-20">
+            <h1 class="text-4xl font-black">Latest Post</h1>
+            <p class="text-lg font-normal w-2/3 mx-auto mt-5">Embracing diverse perspectives fuels innovation and
+                fosters understanding making every discourse a
+                potential win. making every exchange an opportunity for growth and mutual benefit.</p>
+
+        </section>
+
+        </section>
+        <!--  section part 06 -->
+        <section class="max-w-[1170px] container mx-auto  mt-20">
+            <div id="card-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+
+
+            </div>
+        </section>
+    </main>
+
+<!-- Footer part -->
+
+<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-24">
+    <img src="images/logo.png" alt="">
+    <p class="text-lg font-normal lg:w-2/3 mx-auto mt-5">Embracing diverse perspectives fuels innovation and
+        fosters understanding making every discourse a
+        potential win. making every exchange an opportunity for growth and mutual benefit.</p>
+
+    <div class="grid grid-flow-col gap-5">
+        <img class="mt-1" src="icon/t.png" alt="">
+        <img src="icon/f.png" alt="">
+        <img src="icon/in.png" alt="">
+        <img src="icon/git.png" alt="">
+    </div>
+
+    <hr class="mt-2 border-dotted bg-black gap-11">
+    <aside>
+        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+       
+    </aside>
+</footer>
+
+ <script src="javascprit.js"></script>
+</body>
+</html>
